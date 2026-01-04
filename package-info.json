@@ -1,0 +1,36 @@
+{
+  "name": "amiran-communications-website",
+  "version": "1.0.0",
+  "description": "Modern website for Amiran Communications - CCTV, Access Control, and Communication Solutions in East Africa",
+  "main": "src/app/page.tsx",
+  "scripts": {
+    "dev": "next dev -p 3000 2>&1 | tee dev.log",
+    "build": "next build && cp -r .next/static .next/standalone/.next/ && cp -r public .next/standalone/",
+    "start": "NODE_ENV=production node .next/standalone/server.js 2>&1 | tee server.log",
+    "lint": "next lint",
+    "setup": "./setup-npm.sh",
+    "db:push": "prisma db push",
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate dev",
+    "db:reset": "prisma migrate reset"
+  },
+  "keywords": [
+    "nextjs",
+    "react",
+    "typescript",
+    "tailwindcss",
+    "shadcn-ui",
+    "amiran-communications",
+    "cctv",
+    "access-control",
+    "communication-solutions",
+    "east-africa"
+  ],
+  "author": "Amiran Communications",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amiran-communications/website"
+  },
+  "homepage": "https://baltoncp.com/amirancomm"
+}
