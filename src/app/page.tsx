@@ -34,6 +34,8 @@ import {
   Sun,
   Moon,
 } from "lucide-react";
+import Image from "next/image";
+import logo from "@/components/logo.png";
 
 export default function Home() {
   // const [isScrolled, setIsScrolled] = useState(false);
@@ -667,10 +669,30 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
-              <div className="flex items-center space-x-2 mb-4">
-                <Shield className="h-8 w-8 text-blue-400" />
-                <span className="text-xl font-bold">Amiran Communications</span>
-              </div>
+              <Link
+                href="/"
+                className="flex items-center justify-center md:justify-start space-x-2 mb-4"
+              >
+                <div className="relative">
+                  <Image
+                    src={logo}
+                    alt="Amiran Communications Logo"
+                    className="h-8 w-12 text-blue-600 animate-pulse"
+                  />
+                  <div
+                    className={`absolute inset-0 rounded-full opacity-20 animate-ping ${
+                      isDarkMode ? "bg-blue-400" : "bg-blue-600"
+                    }`}
+                  ></div>
+                </div>
+                <span
+                  className={`text-xl font-bold ${
+                    isDarkMode ? "text-white" : "text-gray-900"
+                  }`}
+                >
+                  Amiran Communications
+                </span>
+              </Link>
               <p className="text-gray-400">
                 Providing tomorrow's technology today with comprehensive
                 security and communication solutions.
